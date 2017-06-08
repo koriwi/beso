@@ -44,7 +44,6 @@ export default {
       });
 
       temp['is-fullwidth'] = this.spread;
-      console.log(temp);
       return temp;
     }
   }

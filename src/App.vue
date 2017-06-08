@@ -4,7 +4,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'app',
   watch: {
@@ -16,7 +15,7 @@ export default {
 </script>
 
 <style>
-html, body, #app {
+html, body, #app, .page {
   height: 100%;
 }
 </style>

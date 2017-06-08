@@ -16,8 +16,6 @@
         type=type
         ref='inputToVerify')
   p.help.is-danger(v-if='invalid') Please fill this field
-  p.help.control(v-if='!invalid')
-
 </template>
 
 <script>

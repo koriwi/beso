@@ -1,9 +1,12 @@
 <template lang='pug'>
 .box
   bform(@success='login')
-    binput(type='email', placeholder='Username', name='username') Username
-    binput(type='password', placeholder='Password', name='password') Password
-    bsubmit(spread=true) {{"login" | translate}}
+    binput(type='email', :placeholder='"login.username" | translate', name='username')
+      | {{"login.username" | translate}}
+    binput(type='password', :placeholder='"login.password" | translate', name='password')
+      | {{"login.password" | translate}}
+    bsubmit(spread=true)
+      | {{"login.submit" | translate}}
 </template>
 
 <script>

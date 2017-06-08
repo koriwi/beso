@@ -1,0 +1,13 @@
+{
+  "lang": {
+    "code": "en",
+    "description": "English"
+  },
+  "translation":{
+    "login":{
+      "username": "Username",
+      "password": "Password",
+      "submit": "Login"
+    }
+  }
+}

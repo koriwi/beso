@@ -29,18 +29,12 @@ export default {
       }
     }
   },
-  methods: {
-    test () {
-      console.log('this is working too');
-    }
-  },
   mounted () {
     this.$on('reset_validation', (data) => {
       this.validation_array = [];
       this.valid_forms = {};
     });
     this.$on('register', (name) => {
-      // console.log(data);
       this.validation_array.push(name);
     });
     this.$on('valid', (data) => {
