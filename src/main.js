@@ -1,9 +1,26 @@
+/* Import Bulma styles */
+import 'bulma/bulma.sass'; // if you use no absolute path -> automatically looks in node_modules
+
+/* import Vue.js 2 */
 import Vue from 'vue';
+
+/* import the main COMPONENT */
 import App from './App';
+
+/* import the router */
 import router from './router';
+
+/* import the component loader */
 import Components from './components';
+Components.register(Vue); // and register all
+
+/* import the filter loader */
 import Filters from './filters';
+Filters.register(Vue); // and register all
+
+/* import the extensions loader */
 import extensions from './extensions';
+extensions.register(Vue); // and register all
 
 // put into default behavior file **********
 if (!window.localStorage.getItem('lang')) {
@@ -12,13 +29,8 @@ if (!window.localStorage.getItem('lang')) {
 }
 // *****************************************
 
+// dunno what this is especially
 Vue.config.productionTip = false;
-
-// register components and filters globally
-Components.register(Vue);
-Filters.register(Vue);
-extensions.register(Vue);
-// ****************************************
 
 /* eslint-disable no-new */
 new Vue({
