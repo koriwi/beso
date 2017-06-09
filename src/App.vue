@@ -18,4 +18,7 @@ export default {
 html, body, #app, .page {
   height: 100%;
 }
+html {
+  overflow: hidden;
+}
 </style>

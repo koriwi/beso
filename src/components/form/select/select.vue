@@ -1,8 +1,8 @@
 <template lang='pug'>
-.field(:class='{"is-horizontal": horizontal}')
+div(:class='{"is-horizontal": horizontal, field: label}')
   div(:class='{"field-label is-normal":horizontal, "field": !horizontal}', v-if='label')
     label.label {{ label }}
-  div(:class='{"field-body is-normal":horizontal, "field": !horizontal}')
+  div(:class='{"field-body is-normal":horizontal && label, "field": !horizontal && label}')
     span.select
       select(
         :placeholder='placeholder'
