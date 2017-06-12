@@ -5,6 +5,7 @@ import submit from './form/submit/submit';
 import input from './form/input/input';
 import select from './form/select/select';
 import edgeBar from './edgebar/edgebar';
+import menuBar from './menubar/menubar';
 
 // register every single component with i.component(component-name-string, component);
 function register (i) { // i is the passed vue instance
@@ -14,6 +15,7 @@ function register (i) { // i is the passed vue instance
   i.component('binput', input);
   i.component('bselect', select);
   i.component('bedgebar', edgeBar);
+  i.component('bmenubar', menuBar);
 }
 
 export default {

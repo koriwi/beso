@@ -1,29 +1,22 @@
 <template lang='pug'>
 .page
-  bedgebar.is-tablet
+  bedgebar.is-tablet(color='primary', lighter-color=true, border='bottom')
     img.image.is-64x64(slot='left', src='../../assets/logo.png')
     bselect(slot='right', name='language_selector', :dataSource='listLangs()', :onChange='changeLang')
   .content-box
     bcenter-box
       router-view
-  bedgebar
-    p lelelel
+  bedgebar(color='primary', lighter-color=true, border='top')
+    a
 </template>
 
 <script>
+// import the lang mixin to provide the changeLang and listLangs functions
+import langMixin from '@/mixins/lang';
+
 export default {
   name: 'loginIndex',
-  methods: {
-    changeLang (l) {
-      window.localStorage.setItem('lang', l);
-      this.$router.go({path: 'this.$router.path'});
-    },
-    listLangs () {
-      return new Promise((resolve, reject) => {
-        resolve(JSON.parse(window.localStorage.getItem('lang_arr')));
-      });
-    }
-  }
+  mixins: [langMixin]
 };
 </script>
 

@@ -8,13 +8,15 @@
       slot
   div(:class='{"field-body is-normal":horizontal, "field": !horizontal}')
     each type in types
-      input.input(
-        v-if="type === '" + type + "'"
-        :placeholder='placeholder'
-        v-model='value'
-        :class='{ "is-danger": invalid }'
-        type=type
-        ref='inputToVerify')
+      p.control(v-if="type === '" + type + "'", :class='{"has-icons-left": icon}')
+        input.input(
+          :placeholder='placeholder'
+          v-model='value'
+          :class='{ "is-danger": invalid }'
+          type=type
+          ref='inputToVerify')
+        span.icon.is-small.is-left(v-if='icon')
+          i.fa(:class='faIcon')
   p.help.is-danger(v-if='invalid') Please fill this field
 </template>
 
@@ -40,6 +42,12 @@ export default {
     },
     name: {
       required: true
+    },
+    icon: {}
+  },
+  computed: {
+    faIcon () {
+      return `fa-${this.icon}`;
     }
   },
   mounted () {

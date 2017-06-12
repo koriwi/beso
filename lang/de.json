@@ -5,9 +5,10 @@
   },
   "translation":{
     "login":{
-      "username": "Benutzername",
+      "username": "E-Mail",
       "password": "Passwort",
-      "submit": "Einloggen"
+      "submit": "Anmelden",
+      "forgot": "Ich habe meine Daten verloren"
     }
   }
 }

@@ -1,4 +1,7 @@
-# test2
+# Beso
+
+## To-Do
+1. Create Mixins for reused component featues, such as computed classes etc.
 
 > A Vue.js project
 

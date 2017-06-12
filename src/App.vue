@@ -14,13 +14,20 @@ export default {
 };
 </script>
 
-<style lang='scss'>
-/* @import '../node_modules/bulma/bulma.sass'; */
+<style lang='sass'>
 
-html, body, #app, .page {
+// import our own variables and THEN bulma, important
+@import '../config/style.sass';
+@import '../node_modules/bulma/bulma.sass';
+// @import '../node_modules/font-awesome/scss/font-awesome.scss';
+@import '../config/custom.sass';
+
+html, body, #app, .page
   height: 100%;
-}
-html {
+
+
+html
   overflow: hidden;
-}
+
+
 </style>

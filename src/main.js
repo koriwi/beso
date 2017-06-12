@@ -1,8 +1,8 @@
-/* Import Bulma styles */
-import 'bulma/bulma.sass'; // if you use no absolute path -> automatically looks in node_modules
-
 /* import Vue.js 2 */
 import Vue from 'vue';
+
+/* import font-awesome */
+import 'font-awesome/scss/font-awesome.scss';
 
 /* import the main COMPONENT */
 import App from './App';

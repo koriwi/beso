@@ -1,6 +1,6 @@
 // import all translation files
-import de from '../../lang/de.json';
-import en from '../../lang/en.json';
+import de from 'LANG/de.json';
+import en from 'LANG/en.json';
 
 var langs = {}; // define the translation object which will contain all languages
 // looks like this when filled [{ "code": "de", "description": "Deutsch" }, ...]

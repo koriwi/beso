@@ -1,0 +1,6 @@
+{
+  "logo": {
+    "location":"@/assets/logo.png",
+    "size": 64
+  }
+}

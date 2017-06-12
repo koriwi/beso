@@ -43,8 +43,12 @@ export default {
   },
   asyncComputed: {
     async dataArr () {
-      let tmp = await this.dataSource;
-      return tmp;
+      if (this.dataSource.then) {
+        let tmp = await this.dataSource;
+        return tmp;
+      }
+
+      return this.dataSource;
     }
   },
   computed: {

@@ -1,6 +1,5 @@
 <template lang='pug'>
-.bar(:class='[classes]')
-  // p {{ config.logo.location }}
+//.bar(:class='[classes]')
   .columns(:style='{height: height}')
     .column.is-3.h-bar.start
       .v-bar
@@ -11,14 +10,14 @@
     .column.is-3.h-bar.end
       .v-bar
         slot(name='right')
+.nav
+  .nav-left
+    .nav-item(v-for='item in $slots.left')
 </template>
 
 <script>
-import mixinConfig from 'MIX/config';
-
 export default {
-  name: 'edgebar',
-  mixins: [mixinConfig],
+  name: 'menubar',
   props: {
     height: {},
     color: {
@@ -39,21 +38,22 @@ export default {
   },
   computed: {
     classes () {
-      let cl = {};
       const color = `is-${this.color}`;
-
-      cl[color] = true;
+      let cl = {};
       cl['is-lighter'] = this.lighterColor;
+      cl[color] = true;
       cl['border-top'] = this.border === 'top';
       cl['border-bottom'] = this.border === 'bottom';
       return cl;
     }
+  },
+  mounted () {
+    console.log(this.$slots);
   }
 };
 </script>
 
 <style lang='sass' scoped>
-
 .bar
   padding: 5px;
   & .columns, & .column
@@ -82,9 +82,9 @@ p.center
   text-align: center;
 
 .border-bottom
-  border-bottom: solid 1px orange;
+  border-bottom: solid 1px #333;
 
 .border-top
-  border-top: solid 1px orange;
+  border-top: solid 1px #333;
 
 </style>

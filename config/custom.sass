@@ -1,0 +1,46 @@
+// this file has custom classes and functions and is loaded after bulma
+
+// CUSTOM
+$rainbow: ("black":($black, $white ),"grey":($grey, $white ),"white":($white, $black),"orange":($orange, $orange-invert ),"yellow":($yellow, $yellow-invert ),"green":($green, $green-invert ),"turquoise":($turquoise, $turquoise-invert ),"blue":($blue, $blue-invert),"purple":($purple, $purple-invert ),"red":($red, $red-invert ))
+
+@each $name, $pair in $rainbow
+  $color: nth($pair, 1);
+  $color-invert: nth($pair, 2);
+  i.is-#{$name}
+    color: $color;
+  .is-#{$name}
+    background-color: $color;
+    &.is-lighter
+      background: lighten($color, 12%);
+      color: $color-invert;
+
+      strong
+          color: $color-invert;
+
+    &.is-darker
+      background: darken($color, 10%);
+      color: $color-invert;
+
+      strong
+          color: $color-invert;
+
+@each $name, $pair in $colors
+  $color: nth($pair, 1);
+  $color-invert: nth($pair, 2);
+  i.is-#{$name}
+    color: lighten($color, 18%);
+  div.is-#{$name}, span.is-#{$name}
+    background-color: $color;
+    &.is-lighter
+      background: lighten($color, 12%);
+      color: $color-invert;
+
+      strong
+          color: $color-invert;
+
+    &.is-darker
+      background: darken($color, 10%);
+      color: $color-invert;
+
+      strong
+          color: $color-invert;

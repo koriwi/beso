@@ -5,9 +5,10 @@
   },
   "translation":{
     "login":{
-      "username": "Username",
+      "username": "E-Mail",
       "password": "Password",
-      "submit": "Login"
+      "submit": "Login",
+      "forgot": "I lost my login"
     }
   }
 }
